@@ -69,7 +69,7 @@ In the extreme **3-bit even/odd parity control** (`/api/parity`, `artifacts/pari
 
 ## Recorded Experimental Evidence
 
-Full analysis and mathematical derivations are in [`docs/paper.md`](docs/paper.md). All recorded receipts are stored in [`artifacts/`](artifacts/) and verified against `source_sha256 = 2144abd4c154a5370ab5e353999c737d188eed3a918868dc29ed1ed14a973c79`.
+Full analysis, mathematical proofs (Propositions 1 & 2), per-condition breakdowns, and sample-budget / panel-size ablations are in [**`PAPER.md`**](PAPER.md) (and [`docs/paper.md`](docs/paper.md)). All recorded receipts are stored in [`artifacts/`](artifacts/) and verified against `source_sha256 = 2144abd4c154a5370ab5e353999c737d188eed3a918868dc29ed1ed14a973c79`.
 
 ### Frozen Confirmation Suite (`seeds = 9100..9123`, $N=24$ seeds, $k=3$, $64$ cases/condition)
 
