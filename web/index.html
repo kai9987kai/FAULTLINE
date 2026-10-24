@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>FAULTLINE — Joint-Failure Ensemble Selection Laboratory</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-main">
+      <p class="eyebrow">CPU-LOCAL EXPERIMENTAL INSTRUMENT // SCHEMA: faultline-dataset-v1</p>
+      <h1>FAULTLINE: Joint-Failure Ensemble Selection Laboratory</h1>
+      <p class="subtitle">
+        Controlled comparison of <strong>Individual Accuracy</strong>, <strong>Pairwise Co-Failure Bound</strong>,
+        <strong>Pooled Majority Error</strong>, and <strong>Joint Worst-Condition Majority Error</strong> under equal panel and calibration budgets.
+      </p>
+    </div>
+    <div class="header-meta">
+      <div class="status-pill" id="status-banner" role="status" aria-live="polite">
+        <span class="status-symbol" id="status-symbol" aria-hidden="true">[READY]</span>
+        <span id="status-text">Ready to run or import dataset</span>
+      </div>
+      <div class="source-hash-box">
+        <span class="meta-label">Source SHA-256:</span>
+        <code id="header-source-sha">checking...</code>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace-grid">
+    <!-- Control & Import Panel -->
+    <section class="card controls-card" aria-labelledby="controls-heading">
+      <h2 id="controls-heading">1. Experiment Controls &amp; Data Boundary</h2>
+
+      <form id="experiment-form" class="control-form">
+        <div class="field-group">
+          <label for="scenario-select">Stress Scenario</label>
+          <select id="scenario-select" name="scenario">
+            <option value="shared">shared — Shared-channel &amp; composed higher-order faults</option>
+            <option value="independent">independent — Negative control: conditionally independent errors</option>
+            <option value="shift">shift — Negative control: unseen test common-cause fault</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="seed-input">Base Seed</label>
+            <input id="seed-input" name="seed" type="number" value="4100" step="1" required>
+          </div>
+          <div class="field-group">
+            <label for="cases-input">Cases / Condition (16..256)</label>
+            <input id="cases-input" name="cases" type="number" min="16" max="256" value="64" required>
+          </div>
+          <div class="field-group">
+            <label for="size-input">Odd Panel Size k</label>
+            <select id="size-input" name="size">
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="replicates-input">Study Replicates (1..64)</label>
+            <input id="replicates-input" name="replicates" type="number" min="1" max="64" value="8" required>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="button" id="run-demo-btn" class="btn primary">Run Single-Seed Analysis</button>
+          <button type="button" id="run-study-btn" class="btn secondary">Run Paired Multi-Seed Study</button>
+        </div>
+      </form>
+
+      <hr class="divider">
+
+      <div class="io-grid">
+        <div class="io-block">
+          <h3>Import Dataset (<code>faultline-dataset-v1</code>)</h3>
+          <p class="helper-text">
+            Validates disjoint calibration/test IDs, binary predictions, and 3..12 components. Invalid imports never fall back to fixture data.
+          </p>
+          <div class="file-row">
+            <input type="file" id="dataset-file-input" accept=".json,application/json" aria-label="Import dataset JSON file">
+            <button type="button" id="analyze-import-btn" class="btn">Analyze Imported Dataset</button>
+          </div>
+        </div>
+
+        <div class="io-block">
+          <h3>Receipt Export &amp; Deterministic Replay</h3>
+          <p class="helper-text">
+            Receipts bind <code>payload_sha256</code>, <code>source_sha256</code>, and full recomputation. Rehashed fabrications are rejected.
+          </p>
+          <div class="file-row">
+            <button type="button" id="export-receipt-btn" class="btn" disabled>Export Current Receipt (.json)</button>
+            <input type="file" id="receipt-file-input" accept=".json,application/json" aria-label="Import receipt JSON file for verification">
+            <button type="button" id="verify-receipt-btn" class="btn">Verify &amp; Replay Receipt</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-alert" class="alert-box error-alert" role="alert" hidden>
+        <strong>[ERROR]</strong> <span id="error-message"></span>
+      </div>
+
+      <div id="verify-banner" class="alert-box verify-alert" role="region" aria-label="Receipt Verification Outcome" hidden>
+        <strong id="verify-badge">[VERIFIED]</strong> <span id="verify-message"></span>
+      </div>
+    </section>
+
+    <!-- Primary Results View -->
+    <section class="card results-card" aria-labelledby="results-heading">
+      <div class="section-header">
+        <h2 id="results-heading">2. Selector Comparison &amp; Held-Out Stress Evaluation</h2>
+        <span class="badge" id="active-run-badge">[NO ACTIVE RESULT]</span>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        No active experiment result is displayed. Run an experiment or import a valid dataset to inspect selector outcomes.
+      </div>
+
+      <div id="single-result-view" hidden>
+        <div class="summary-strip" id="cost-summary-strip"></div>
+
+        <h3>Held-Out Test Error vs. Worst-Condition Error (Frozen Panels)</h3>
+        <div id="comparison-chart" class="chart-container" role="img" aria-label="Bar chart comparing pooled test error and worst-condition test error across the four selectors"></div>
+
+        <div tabindex="0" role="region" aria-labelledby="policy-table-caption" class="table-wrapper">
+          <table class="data-table" id="policy-table">
+            <caption id="policy-table-caption">Calibration selection and frozen held-out test performance across the four deterministic policies</caption>
+            <thead>
+              <tr>
+                <th scope="col">Selector Policy</th>
+                <th scope="col">Selected Panel</th>
+                <th scope="col">Cal Pooled Err</th>
+                <th scope="col">Cal Worst-Cond Err</th>
+                <th scope="col">Test Pooled Err</th>
+                <th scope="col">Test Worst-Cond Err</th>
+                <th scope="col">Test Unanimous Wrong</th>
+              </tr>
+            </thead>
+            <tbody id="policy-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="split-columns">
+          <div>
+            <h3>Calibration Pairwise Co-Failure Matrix</h3>
+            <p class="helper-text">Diagonal shows marginal failure rate; off-diagonal shows pair co-failure rate on calibration rows.</p>
+            <div tabindex="0" role="region" aria-labelledby="cofailure-matrix-caption" class="table-wrapper">
+              <table class="data-table matrix-table" id="cofailure-matrix-table">
+                <caption id="cofailure-matrix-caption">Calibration pairwise co-failure rates</caption>
+                <thead id="cofailure-matrix-head"></thead>
+                <tbody id="cofailure-matrix-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3>Top Calibration Joint-Failure Signatures (Hyperedges)</h3>
+            <p class="helper-text">Exact sets of simultaneously failing components observed during calibration.</p>
+            <div tabindex="0" role="region" aria-labelledby="signatures-caption" class="table-wrapper">
+              <table class="data-table" id="signatures-table">
+                <caption id="signatures-caption">Empirical joint-failure hyperedges</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Failing Component Set</th>
+                    <th scope="col">Order</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Cal Rate</th>
+                  </tr>
+                </thead>
+                <tbody id="signatures-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <h3>Held-Out Failure Witnesses (<code>joint</code> vs. <code>accuracy</code>)</h3>
+        <div tabindex="0" role="region" aria-labelledby="witnesses-caption" class="table-wrapper">
+          <table class="data-table" id="witnesses-table">
+            <caption id="witnesses-caption">Sampled held-out test failure cases</caption>
+            <thead>
+              <tr>
+                <th scope="col">Policy</th>
+                <th scope="col">Case ID</th>
+                <th scope="col">Condition</th>
+                <th scope="col">Truth</th>
+                <th scope="col">Panel Vote</th>
+                <th scope="col">Wrong Panel Members</th>
+              </tr>
+            </thead>
+            <tbody id="witnesses-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Paired Study View -->
+      <div id="study-result-view" hidden>
+        <div class="summary-strip" id="study-summary-strip"></div>
+
+        <h3>Paired Differences vs. <code>joint</code> Selector (Comparator Error − Joint Error)</h3>
+        <p class="helper-text">
+          Positive values (+) indicate <code>joint</code> achieved lower held-out error than the comparator; negative values (−) indicate <code>joint</code> had higher error. Intervals are descriptive percentile bootstraps over seeds.
+        </p>
+        <div tabindex="0" role="region" aria-labelledby="study-paired-caption" class="table-wrapper">
+          <table class="data-table" id="study-paired-table">
+            <caption id="study-paired-caption">Paired seed differences against the joint selector</caption>
+            <thead>
+              <tr>
+                <th scope="col">Comparator Policy</th>
+                <th scope="col">Mean Δ Worst-Cond Err</th>
+                <th scope="col">95% Bootstrap Interval</th>
+                <th scope="col">Mean Δ Pooled Err</th>
+                <th scope="col">Win / Tie / Loss (Joint vs Comp)</th>
+              </tr>
+            </thead>
+            <tbody id="study-paired-tbody"></tbody>
+          </table>
+        </div>
+
+        <h3>Aggregate Policy Performance Across Paired Seeds</h3>
+        <div tabindex="0" role="region" aria-labelledby="study-agg-caption" class="table-wrapper">
+          <table class="data-table" id="study-agg-table">
+            <caption id="study-agg-caption">Mean calibration and held-out test errors across study seeds</caption>
+            <thead>
+              <tr>
+                <th scope="col">Policy</th>
+                <th scope="col">Mean Cal Pooled</th>
+                <th scope="col">Mean Cal Worst-Cond</th>
+                <th scope="col">Mean Test Pooled</th>
+                <th scope="col">Mean Test Worst-Cond</th>
+                <th scope="col">Mean Test Unanimous Wrong</th>
+              </tr>
+            </thead>
+            <tbody id="study-agg-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exact 3-Bit Parity Control -->
+    <section class="card parity-card" aria-labelledby="parity-heading">
+      <div class="section-header">
+        <h2 id="parity-heading">3. Exact 3-Bit Even/Odd Parity Algebraic Control</h2>
+        <button type="button" id="reload-parity-btn" class="btn small">Reload Exact Parity Proof</button>
+      </div>
+      <p class="helper-text">
+        Demonstrates why marginal accuracy and pairwise co-failure matrices cannot uniquely determine 3-panel majority error.
+        Both distributions below have identical marginal failure rates (<code>0.50</code> each) and identical pairwise co-failure rates (<code>0.25</code> each pair), yet majority vote error is <code>0.75</code> (3/4) vs. <code>0.25</code> (1/4).
+      </p>
+      <div id="parity-content" class="parity-grid"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

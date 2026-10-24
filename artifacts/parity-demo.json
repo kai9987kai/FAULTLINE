@@ -1,0 +1,104 @@
+{
+  "schema": "faultline-receipt-v1",
+  "kind": "parity",
+  "config": {},
+  "source_sha256": "2144abd4c154a5370ab5e353999c737d188eed3a918868dc29ed1ed14a973c79",
+  "input_sha256": null,
+  "payload_sha256": "d8a695a0f616304f0d33a3a718892bdb8ebfbafdfb3dc4b4fe373436acc02b4d",
+  "result": {
+    "even": {
+      "marginals": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pairwise": [
+        [
+          0.5,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          0.5,
+          0.25
+        ],
+        [
+          0.25,
+          0.25,
+          0.5
+        ]
+      ],
+      "majority_error": 0.75,
+      "patterns": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    "odd": {
+      "marginals": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "pairwise": [
+        [
+          0.5,
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          0.5,
+          0.25
+        ],
+        [
+          0.25,
+          0.25,
+          0.5
+        ]
+      ],
+      "majority_error": 0.25,
+      "patterns": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  }
+}

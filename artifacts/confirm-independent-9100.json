@@ -1,0 +1,6630 @@
+{
+  "schema": "faultline-receipt-v1",
+  "kind": "study",
+  "config": {
+    "seeds": [
+      9100,
+      9101,
+      9102,
+      9103,
+      9104,
+      9105,
+      9106,
+      9107,
+      9108,
+      9109,
+      9110,
+      9111,
+      9112,
+      9113,
+      9114,
+      9115,
+      9116,
+      9117,
+      9118,
+      9119,
+      9120,
+      9121,
+      9122,
+      9123
+    ],
+    "cases": 64,
+    "scenario": "independent",
+    "size": 3
+  },
+  "source_sha256": "2144abd4c154a5370ab5e353999c737d188eed3a918868dc29ed1ed14a973c79",
+  "input_sha256": null,
+  "payload_sha256": "10eb3e843b3a5b31ef39b7ece349504d62e43676cc2f5f2e78dcef92f3531ff5",
+  "result": {
+    "scenario": "independent",
+    "cases_per_condition": 64,
+    "panel_size": 3,
+    "seeds": [
+      9100,
+      9101,
+      9102,
+      9103,
+      9104,
+      9105,
+      9106,
+      9107,
+      9108,
+      9109,
+      9110,
+      9111,
+      9112,
+      9113,
+      9114,
+      9115,
+      9116,
+      9117,
+      9118,
+      9119,
+      9120,
+      9121,
+      9122,
+      9123
+    ],
+    "n_seeds": 24,
+    "runs": [
+      {
+        "seed": 9100,
+        "dataset": "faultline-independent-seed9100-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9101,
+        "dataset": "faultline-independent-seed9101-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9102,
+        "dataset": "faultline-independent-seed9102-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9103,
+        "dataset": "faultline-independent-seed9103-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9104,
+        "dataset": "faultline-independent-seed9104-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9105,
+        "dataset": "faultline-independent-seed9105-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9106,
+        "dataset": "faultline-independent-seed9106-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9107,
+        "dataset": "faultline-independent-seed9107-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c6"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.027344,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.046875,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.046875,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9108,
+        "dataset": "faultline-independent-seed9108-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.03125,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.078125
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.03125,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.078125
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.03125,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.078125
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9109,
+        "dataset": "faultline-independent-seed9109-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9110,
+        "dataset": "faultline-independent-seed9110-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9111,
+        "dataset": "faultline-independent-seed9111-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9112,
+        "dataset": "faultline-independent-seed9112-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9113,
+        "dataset": "faultline-independent-seed9113-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9114,
+        "dataset": "faultline-independent-seed9114-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9115,
+        "dataset": "faultline-independent-seed9115-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9116,
+        "dataset": "faultline-independent-seed9116-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c2",
+              "c6"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.042969,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.078125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c2",
+              "c6"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.042969,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.078125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c2",
+              "c6"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.042969,
+              "worst_group_error": 0.078125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.078125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9117,
+        "dataset": "faultline-independent-seed9117-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c1",
+              "c2",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c7"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.035156,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c7"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.035156,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9118,
+        "dataset": "faultline-independent-seed9118-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9119,
+        "dataset": "faultline-independent-seed9119-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9120,
+        "dataset": "faultline-independent-seed9120-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.0,
+              "worst_group_error": 0.0,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.003906,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9121,
+        "dataset": "faultline-independent-seed9121-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.03125,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.011719,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c1",
+              "c2",
+              "c3"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9122,
+        "dataset": "faultline-independent-seed9122-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.023438,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.007812,
+              "worst_group_error": 0.015625,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c1",
+              "c2",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.027344,
+              "worst_group_error": 0.046875,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.046875
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c2",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.007812,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.046875,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c2",
+              "c4"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.007812,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.015625
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.046875,
+              "worst_group_error": 0.0625,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.046875
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.0625
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "seed": 9123,
+        "dataset": "faultline-independent-seed9123-c64",
+        "policies": {
+          "accuracy": {
+            "id": "accuracy",
+            "label": "Individual Accuracy (Marginal)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pairwise": {
+            "id": "pairwise",
+            "label": "Pairwise Co-Failure Bound (2nd Moment)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "pooled": {
+            "id": "pooled",
+            "label": "Pooled Majority Error (Average)",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          },
+          "joint": {
+            "id": "joint",
+            "label": "Joint Worst-Condition Majority Error",
+            "panel": [
+              "c0",
+              "c1",
+              "c2"
+            ],
+            "calibration": {
+              "n": 256,
+              "error": 0.015625,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.0,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            },
+            "test": {
+              "n": 256,
+              "error": 0.019531,
+              "worst_group_error": 0.03125,
+              "unanimous_wrong_rate": 0.003906,
+              "groups": [
+                {
+                  "condition": "nominal",
+                  "n": 64,
+                  "error": 0.015625
+                },
+                {
+                  "condition": "glare_surge",
+                  "n": 64,
+                  "error": 0.03125
+                },
+                {
+                  "condition": "multipath_hum",
+                  "n": 64,
+                  "error": 0.0
+                },
+                {
+                  "condition": "composed_storm",
+                  "n": 64,
+                  "error": 0.03125
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "aggregate": {
+      "policies": {
+        "accuracy": {
+          "id": "accuracy",
+          "label": "Individual Accuracy (Marginal)",
+          "mean_calibration_error": 0.013183,
+          "mean_calibration_worst_group_error": 0.030599,
+          "mean_test_error": 0.010905,
+          "mean_test_worst_group_error": 0.027995,
+          "mean_test_unanimous_wrong_rate": 0.000163
+        },
+        "pairwise": {
+          "id": "pairwise",
+          "label": "Pairwise Co-Failure Bound (2nd Moment)",
+          "mean_calibration_error": 0.01237,
+          "mean_calibration_worst_group_error": 0.023438,
+          "mean_test_error": 0.016276,
+          "mean_test_worst_group_error": 0.033854,
+          "mean_test_unanimous_wrong_rate": 0.000325
+        },
+        "pooled": {
+          "id": "pooled",
+          "label": "Pooled Majority Error (Average)",
+          "mean_calibration_error": 0.010742,
+          "mean_calibration_worst_group_error": 0.024089,
+          "mean_test_error": 0.01888,
+          "mean_test_worst_group_error": 0.035156,
+          "mean_test_unanimous_wrong_rate": 0.000325
+        },
+        "joint": {
+          "id": "joint",
+          "label": "Joint Worst-Condition Majority Error",
+          "mean_calibration_error": 0.010905,
+          "mean_calibration_worst_group_error": 0.023438,
+          "mean_test_error": 0.018555,
+          "mean_test_worst_group_error": 0.035156,
+          "mean_test_unanimous_wrong_rate": 0.000325
+        }
+      },
+      "paired_vs_joint": {
+        "accuracy": {
+          "comparator": "accuracy",
+          "label": "Individual Accuracy (Marginal)",
+          "mean_diff_worst_group_error": -0.007161,
+          "ci95_worst_group_error": [
+            -0.013672,
+            -0.001953
+          ],
+          "mean_diff_pooled_error": -0.00765,
+          "ci95_pooled_error": [
+            -0.012695,
+            -0.003255
+          ],
+          "joint_wins": 1,
+          "ties": 16,
+          "comparator_wins": 7,
+          "per_seed_diff_worst_group_error": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.015625,
+            0.0,
+            -0.015625,
+            -0.03125,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.015625,
+            -0.046875,
+            -0.015625,
+            0.0,
+            0.0,
+            0.0,
+            -0.015625,
+            -0.046875,
+            0.0
+          ],
+          "note": "Descriptive percentile bootstrap over seed pairs; not a sequential or conformal guarantee."
+        },
+        "pairwise": {
+          "comparator": "pairwise",
+          "label": "Pairwise Co-Failure Bound (2nd Moment)",
+          "mean_diff_worst_group_error": -0.001302,
+          "ci95_worst_group_error": [
+            -0.003255,
+            0.0
+          ],
+          "mean_diff_pooled_error": -0.002279,
+          "ci95_pooled_error": [
+            -0.00472,
+            -0.000163
+          ],
+          "joint_wins": 0,
+          "ties": 22,
+          "comparator_wins": 2,
+          "per_seed_diff_worst_group_error": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.015625,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.015625,
+            0.0
+          ],
+          "note": "Descriptive percentile bootstrap over seed pairs; not a sequential or conformal guarantee."
+        },
+        "pooled": {
+          "comparator": "pooled",
+          "label": "Pooled Majority Error (Average)",
+          "mean_diff_worst_group_error": 0.0,
+          "ci95_worst_group_error": [
+            0.0,
+            0.0
+          ],
+          "mean_diff_pooled_error": 0.000326,
+          "ci95_pooled_error": [
+            0.0,
+            0.000977
+          ],
+          "joint_wins": 0,
+          "ties": 24,
+          "comparator_wins": 0,
+          "per_seed_diff_worst_group_error": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "note": "Descriptive percentile bootstrap over seed pairs; not a sequential or conformal guarantee."
+        }
+      }
+    }
+  }
+}
